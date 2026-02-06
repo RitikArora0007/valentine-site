@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ffd1dc, #ff8fab);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, .3);
+    filter: blur(80px);
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .3);
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 34px;
+}
+
+.buttons {
+    margin-top: 35px;
+    height: 100px;
+    position: relative;
+}
+
+button {
+    padding: 15px 34px;
+    border: none;
+    border-radius: 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#yes {
+    background: #4CAF50;
+    color: white;
+}
+
+#no {
+    background: #ff4d4d;
+    color: white;
+    position: absolute;
+}
+
+#final {
+    display: none;
+    font-size: 34px;
+    color: #ff4d6d;
+}
+
+.dog {
+    position: absolute;
+    width: 110px;
+    animation: pop .6s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 28px;
+    color: #ff4d6d;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    from {
+        bottom: -20px;
+    }
+
+    to {
+        bottom: 100vh;
+    }
+}
